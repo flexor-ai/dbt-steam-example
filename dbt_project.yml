@@ -18,10 +18,10 @@ clean-targets:
 models:
   flexor_dbt_steam_example:
     battlefield_game:
-      flex:
+      flex_transformations:
         +materialized: incremental
     call_of_duty_game:
-      flex:
+      flex_transformations:
         +materialized: incremental
 vars:
   flexor:
