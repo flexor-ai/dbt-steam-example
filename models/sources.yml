@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: ingested_games
+    database: flexordemo
+    schema: demo_steam_2023_tables
+    tables:
+      - name: "flexor_battlefield_2042_steam_reviews"
+      - name: "flexor_steam_cod_reviews"
+  - name: precalculated_flex
+    database: flexordemo
+    schema: demo_steam_2023_dbt
+    tables:
+      - name: "battlefield_game_suggest_not_buying"
+      - name: "battlefield_game_not_realistic"
+      - name: "battlefield_game_expensive"
+      - name: "battlefield_game_bugs"
+      - name: "battlefield_game_uniqueness_category"
+      - name: "call_of_duty_game_suggest_not_buying"
+      - name: "call_of_duty_game_not_realistic"
+      - name: "call_of_duty_game_expensive"
+      - name: "call_of_duty_game_bugs"
+      - name: "call_of_duty_game_uniqueness_category"

@@ -1,0 +1,42 @@
+
+name: 'flexor_dbt_steam_example'
+version: '0.1.0'
+config-version: 2
+
+profile: 'default'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+  - "package-lock.yml"
+
+models:
+  flexor_dbt_steam_example:
+    battlefield_game:
+      flex:
+        +materialized: incremental
+    call_of_duty_game:
+      flex:
+        +materialized: incremental
+vars:
+  flexor:
+    flex_online_mode: false
+    flex_function_project: 'flexor-364115'
+    flex_function_dataset: 'demo_steam_2023_tables'
+  precalculated_flex_tables: [
+    "battlefield_game_suggest_not_buying",
+    "battlefield_game_not_realistic",
+    "battlefield_game_expensive",
+    "battlefield_game_bugs",
+    "battlefield_game_uniqueness_category",
+    "call_of_duty_game_suggest_not_buying",
+    "call_of_duty_game_not_realistic",
+    "call_of_duty_game_expensive",
+    "call_of_duty_game_bugs",
+    "call_of_duty_game_uniqueness_category"
+  ]
