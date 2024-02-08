@@ -6,4 +6,4 @@ SELECT
     EXTRACT(year from review_timestamp) as year
 FROM {{ source('ingested_games', 'flexor_battlefield_2042_steam_reviews') }}
 ORDER BY review_timestamp desc
-LIMIT 5
+LIMIT 10000
