@@ -1,5 +1,7 @@
 # Steam Reviews Example
 
+[Flexor-dbt](https://github.com/flexor-ai/flexor-dbt) support for steam ingested reviews and examples
+
 # What does this examples do?
 
 For every game, the package exposes 3 types of data:
